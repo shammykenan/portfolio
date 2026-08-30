@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Shammy Kenan Din — Resume</title>
+<style>
+  @page { size: Letter; margin: 0.5in 0.55in; }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: "Calibri", "Segoe UI", Arial, sans-serif;
+    font-size: 9.7pt;
+    line-height: 1.32;
+    color: #1a1a1a;
+    background: #fff;
+    max-width: 7.5in;
+    margin: 0 auto;
+    padding: 0.5in 0.55in;
+  }
+
+  @media print {
+    body { padding: 0; max-width: none; }
+  }
+
+  .entry { break-inside: avoid; page-break-inside: avoid; }
+  .track { break-after: avoid; page-break-after: avoid; }
+  h2 { break-after: avoid; page-break-after: avoid; }
+
+  /* ── HEADER ── */
+  .name {
+    font-size: 20pt;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+  }
+
+  .title {
+    font-size: 10pt;
+    color: #333;
+    margin-top: 2pt;
+  }
+
+  .contact {
+    font-size: 8.7pt;
+    color: #444;
+    margin-top: 3pt;
+  }
+
+  .contact a { color: #444; text-decoration: none; }
+
+  /* ── SECTIONS ── */
+  h2 {
+    font-size: 9pt;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    border-bottom: 1px solid #999;
+    padding-bottom: 2pt;
+    margin-top: 9pt;
+    margin-bottom: 5pt;
+  }
+
+  p.summary { text-align: justify; }
+
+  /* ── SKILLS TABLE ── */
+  table.skills { width: 100%; border-collapse: collapse; }
+
+  table.skills td {
+    vertical-align: top;
+    padding: 1pt 0;
+  }
+
+  table.skills td.k {
+    width: 86pt;
+    font-weight: 700;
+    padding-right: 8pt;
+    white-space: nowrap;
+  }
+
+  /* ── ENTRIES ── */
+  .entry { margin-bottom: 7pt; }
+  .entry:last-child { margin-bottom: 0; }
+
+  .entry-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12pt;
+  }
+
+  .entry-title { font-weight: 700; }
+
+  .entry-right {
+    font-size: 8.7pt;
+    color: #333;
+    white-space: nowrap;
+    text-align: right;
+  }
+
+  .entry-sub {
+    font-size: 8.7pt;
+    color: #444;
+    font-style: italic;
+    margin-top: 1pt;
+  }
+
+  ul { margin-top: 2.5pt; padding-left: 13pt; }
+
+  li { margin-bottom: 2pt; }
+
+  li:last-child { margin-bottom: 0; }
+
+  .track {
+    font-size: 8.7pt;
+    font-weight: 700;
+    margin-top: 4pt;
+  }
+
+  .em { font-weight: 700; }
+</style>
+</head>
+<body>
+
+<div class="name">Shammy Kenan Din</div>
+<div class="title">Web Developer &mdash; Backend Focused &nbsp;|&nbsp; PHP &amp; Laravel &nbsp;|&nbsp; PostgreSQL &amp; MySQL</div>
+<div class="contact">
+  Karuhatan, Valenzuela City, PH &nbsp;|&nbsp; dinshammykenan012@gmail.com &nbsp;|&nbsp; 0994 162 8327<br>
+  github.com/shammykenan &nbsp;|&nbsp; linkedin.com/in/shammykenandin
+</div>
+
+<h2>Summary</h2>
+<p class="summary">
+  Backend-focused developer with <span class="em">500 hours</span> of professional IT experience, serving as sole developer on an internal
+  Laravel/PostgreSQL reporting system now in company-wide daily use at Upturn Business Solutions. Comfortable owning a
+  feature end to end &mdash; schema design, business logic, review, and deployment. Also handled day-to-day IT support for a 6-department firm. Seeking a backend, web development, or IT role.
+</p>
+
+<h2>Technical Skills</h2>
+<table class="skills">
+  <tr><td class="k">Languages</td><td>PHP &middot; SQL &middot; JavaScript</td></tr>
+  <tr><td class="k">Frameworks</td><td>Laravel &middot; Blade &middot; Bootstrap</td></tr>
+  <tr><td class="k">Databases</td><td>PostgreSQL &middot; MySQL</td></tr>
+  <tr><td class="k">Tools &amp; Deploy</td><td>Git &middot; GitHub (PR review) &middot; Railway &middot; Composer &middot; XAMPP &middot; Laragon</td></tr>
+  <tr><td class="k">Concepts</td><td>MVC &middot; RBAC &middot; Session Auth &middot; CSRF Handling &middot; Audit Trails &middot; Schema Design &middot; Excel/PDF Export</td></tr>
+</table>
+
+<h2>Experience</h2>
+<div class="entry">
+  <div class="entry-head">
+    <span class="entry-title">IT Intern &mdash; Upturn Business Solutions</span>
+    <span class="entry-right">May &ndash; Aug 2026 &middot; 500 hours</span>
+  </div>
+  <div class="entry-sub">Valenzuela City, PH &nbsp;|&nbsp; Sole developer on the company's EOD system <em>and</em> its day-to-day IT support</div>
+  <div class="track">Systems Development &mdash; Laravel &middot; Blade &middot; PostgreSQL &middot; Railway &middot; Git/GitHub</div>
+  <ul>
+    <li>Replaced the firm's Google Form reporting with a purpose-built Laravel/PostgreSQL system, built solo over <span class="em">500 hours</span> &mdash; now carrying <span class="em">300+ reports/week</span> from <span class="em">50+ staff</span> against <span class="em">100+ clients</span> and <span class="em">1,000+ projects</span>, still the daily tool across all <span class="em">6 departments</span> after internship end.</li>
+    <li>Attributed every entry to a client, project, and department; built <span class="em">ComplianceService</span> to auto-classify reports on-time/late/missing honouring leave, holidays, and weekend deadlines.</li>
+    <li>Ran it as production: PR-reviewed Git workflow, staging/production deploys on Railway, Excel/PDF export, and a reporting-line transfer workflow preserving audit trail through staff turnover.</li>
+  </ul>
+  <div class="track">IT Support &amp; Operations</div>
+  <ul>
+    <li>Day-to-day desktop support across all <span class="em">6 departments</span> &mdash; hardware, printers, network, Microsoft Office licensing.</li>
+    <li>Set up replacement <span class="em">biometric attendance devices</span> after sync failure with <span class="em">Sprout</span>, restoring the automated HR attendance feed.</li>
+    <li>Onboarded/offboarded staff (accounts, devices) and trained a newly hired IT employee on the EOD system and Tax Portal.</li>
+  </ul>
+</div>
+
+<h2>Projects</h2>
+
+<div class="entry">
+  <div class="entry-head">
+    <span class="entry-title">SKD Point of Sale &mdash; Restaurant Management System</span>
+    <span class="entry-right">Personal Project</span>
+  </div>
+  <div class="entry-sub">PHP (MVC) &middot; MySQL &middot; Bootstrap &middot; ESC/POS</div>
+  <ul>
+    <li>Engineered a <span class="em">3-role</span> POS (Admin / Cashier / Kitchen) handling the full order lifecycle &mdash; item variants, modifiers, kitchen dispatch, receipt generation.</li>
+    <li>Implemented BIR-compliant invoicing (OR numbering, VAT, daily Z-reading) and ESC/POS thermal printing with browser fallback.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="entry-head">
+    <span class="entry-title">Grease Monkey &mdash; Inventory Management</span>
+    <span class="entry-right">Personal Project</span>
+  </div>
+  <div class="entry-sub">PHP (MVC) &middot; MySQL &middot; Bootstrap &nbsp;|&nbsp; github.com/shammykenan/greasemonkeyinventory</div>
+  <ul>
+    <li>Automotive-parts inventory system: SKU tracking, stock movement logs, full audit trail, auth rate limiting, and one-click DB backup/restore.</li>
+  </ul>
+</div>
+
+<h2>Education</h2>
+<div class="entry">
+  <div class="entry-head">
+    <span class="entry-title">BS Information Technology</span>
+    <span class="entry-right">Expected 2027</span>
+  </div>
+  <div class="entry-sub">Datamex College of Saint Adeline &middot; Valenzuela City, Metro Manila &nbsp;|&nbsp; 500-hour internship at Upturn Business Solutions (2026)</div>
+</div>
+
+</body>
+</html>
