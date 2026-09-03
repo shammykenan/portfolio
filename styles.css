@@ -381,6 +381,10 @@
   .stat-n { font-family: var(--mono); font-size: 26px; font-weight: 700; letter-spacing: -0.05em; line-height: 1; font-variant-numeric: tabular-nums; }
   .stat-l { font-family: var(--mono); font-size: 8.5px; font-weight: 600; color: var(--t4); letter-spacing: 0.11em; text-transform: uppercase; line-height: 1.6; }
 
+  /* the one stat that proves it's real, not just built — same signal
+     colour as the "Available" pip and the project "Live" badges */
+  .stat-hi .stat-l { color: var(--live); }
+
   /* narrow phones: 2x2 instead of 4-across, so a longer label
      (e.g. "Roles — sole IT support") has room to breathe */
   @media (max-width: 420px) {
