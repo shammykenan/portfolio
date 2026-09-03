@@ -348,6 +348,7 @@
     font-family: var(--mono);
     font-size: 10.5px;
     font-weight: 500;
+    overflow-wrap: anywhere;
     transition: background .16s, color .16s;
   }
 
@@ -501,6 +502,7 @@
     text-decoration: none;
     display: flex;
     flex-direction: column;
+    min-width: 0;
     transition: background .18s, border-color .18s;
   }
 
@@ -509,7 +511,7 @@
   @media (min-width: 640px) { .cert-k { font-size: 9px; } }
   .cert-t { font-size: 11px; font-weight: 700; line-height: 1.35; letter-spacing: -0.02em; color: var(--t1); margin-bottom: 3px; }
   @media (min-width: 640px) { .cert-t { font-size: 13px; } }
-  .cert-s { font-family: var(--mono); font-size: 9px; color: var(--t4); margin-top: auto; padding-top: 8px; }
+  .cert-s { font-family: var(--mono); font-size: 9px; color: var(--t4); margin-top: auto; padding-top: 8px; overflow-wrap: anywhere; }
 
   /* ── GALLERY MARQUEE ── */
   .car {
@@ -901,7 +903,7 @@
   .fi::placeholder { color: var(--t4); }
   textarea.fi { resize: vertical; min-height: 90px; }
   .fa { display: flex; gap: 8px; margin-top: 16px; }
-  .fa .pill { flex: 1; justify-content: center; padding: 10px; }
+  .fa .pill { flex: 1; justify-content: center; padding: 10px; min-width: 0; }
   .fnote { font-family: var(--mono); font-size: 9px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--t4); margin-top: 11px; }
 
   /* inline PDF viewer — the modal itself never scrolls, only the PDF does */
