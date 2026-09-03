@@ -185,43 +185,39 @@
   .row[data-case] { cursor: pointer; }
 
   /* "tap to view" affordance revealed on hover / focus */
+  /* always visible — a hover-only reveal meant people were missing
+     that rows expand into a case study at all */
   .row-more {
     display: inline-flex;
     align-items: center;
     gap: 5px;
     font-family: var(--mono);
     font-size: 9px;
-    font-weight: 600;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.13em;
-    color: var(--t4);
-    opacity: 0;
-    transform: translateY(-3px);
-    transition: opacity .2s, transform .2s, color .2s, background .2s;
+    color: var(--t2);
+    background: var(--s1);
+    border: 1px solid var(--line-2);
+    border-radius: 5px;
+    padding: 4px 8px;
     margin-top: -2px;
+    margin-left: -8px;
     align-self: flex-start;
     width: fit-content;
+    transition: color .2s, background .2s, border-color .2s;
   }
 
   .row-more svg { width: 11px; height: 11px; transition: transform .2s; }
 
   .row[data-case]:hover .row-more,
   .row[data-case]:focus-visible .row-more {
-    opacity: 1;
-    transform: none;
     color: var(--t1);
-    background: var(--s1);
-    border-radius: 5px;
-    padding: 4px 8px;
-    margin-left: -8px;
+    background: var(--s2);
+    border-color: var(--t4);
   }
 
   .row[data-case]:hover .row-more svg { transform: translateX(2px); }
-
-  /* touch devices: always visible, since there is no hover */
-  @media (hover: none) {
-    .row-more { opacity: 1; transform: none; }
-  }
 
   /* ── HERO ── */
   .hero { padding-top: 0; padding-bottom: 0; }
@@ -516,6 +512,41 @@
   .cert-t { font-size: 11px; font-weight: 700; line-height: 1.35; letter-spacing: -0.02em; color: var(--t1); margin-bottom: 3px; }
   @media (min-width: 640px) { .cert-t { font-size: 13px; } }
   .cert-s { font-family: var(--mono); font-size: 9px; color: var(--t4); margin-top: auto; padding-top: 8px; overflow-wrap: anywhere; }
+
+  /* certificate card: caption + highlighted "tap to view" pill, stacked
+     and pinned to the bottom of the card as one group */
+  .cert-foot { margin-top: auto; padding-top: 8px; display: flex; flex-direction: column; gap: 7px; min-width: 0; }
+  .cert-foot .cert-s { margin-top: 0; padding-top: 0; }
+
+  .cert-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-family: var(--mono);
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.13em;
+    color: var(--t2);
+    background: var(--s1);
+    border: 1px solid var(--line-2);
+    border-radius: 5px;
+    padding: 4px 8px;
+    width: fit-content;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    transition: color .2s, background .2s, border-color .2s;
+  }
+
+  .cert-more svg { width: 11px; height: 11px; transition: transform .2s; }
+
+  .cert:hover .cert-more, .cert:focus-visible .cert-more {
+    color: var(--t1);
+    background: var(--s2);
+    border-color: var(--t4);
+  }
+
+  .cert:hover .cert-more svg { transform: translateX(2px); }
 
   /* ── GALLERY MARQUEE ── */
   .car {
