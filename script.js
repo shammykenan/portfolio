@@ -281,7 +281,7 @@
       ],
       problem: 'The firm ran daily reporting on a <strong>Google Form</strong>. Hours arrived as free text, so partners couldn’t tell which client an hour belonged to — and supervisors chased late reports by hand.',
       built: 'A Laravel/PostgreSQL platform where every entry is attributed to a <strong>client, project and department</strong>, with a compliance engine that classifies reports on-time, late or missing on its own.',
-      result: '<strong><span class="n">300+</span> reports a week</strong> from <span class="n">59</span> users across all <span class="n">6</span> departments, running at <span class="n">91.7%</span> compliance. Handed over with in-app documentation — and <strong>still running today</strong>.',
+      result: '<strong><span class="n">300+</span> reports a week</strong> from <span class="n">60+</span> users across all <span class="n">6</span> departments, running at <span class="n">91.7%</span> compliance. Handed over with in-app documentation — and <strong>still running today</strong>.',
       link: { url: 'https://eod.upturnbusinesssolutionsph.com', label: 'eod.upturnbusinesssolutionsph.com' },
       detail: [
         '<strong>Attribution from day one.</strong> Consolidated <span class="n">4</span> separate admin screens into one System Configuration area and loaded the firm’s full catalogue — <span class="n">100+</span> clients and <span class="n">1,000+</span> projects — before go-live, so hours accumulated per engagement rather than leaving the backfill to someone else.',
