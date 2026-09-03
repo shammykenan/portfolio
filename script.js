@@ -273,7 +273,7 @@
       meta: 'Sole developer · Upturn Business Solutions · May – Aug 2026 · Live in production',
       shots: [
         { src: 'images/eod-system/eod-login.png',      cap: 'Sign-in — built to read as trustworthy for a financial firm' },
-        { src: 'images/eod-system/eod-dashboard.png',  cap: 'Admin dashboard — 59 users, live compliance rate, and a filing calendar showing who is missing' },
+        { src: 'images/eod-system/eod-dashboard.png',  cap: 'Admin dashboard — 60+ users, live compliance rate, and a filing calendar showing who is missing' },
         { src: 'images/eod-system/eod-compliance.png', cap: 'Compliance engine — department and supervisor rankings' },
         { src: 'images/eod-system/eod-analytics.png',  cap: 'Analytics — hours attributed by department, client and category' },
         { src: 'images/eod-system/eod-reports.png',    cap: 'Report submission — every entry tied to a client and project' },
