@@ -494,6 +494,14 @@
 
     var active = '';
     secs.forEach(function (s) { if (y >= s.offsetTop - 140) active = s.id; });
+
+    /* the last section's offsetTop threshold can be unreachable if it's
+       short and there isn't enough page left below it to scroll that
+       far - once at (or essentially at) the bottom of the page, just
+       force the last section active instead of leaving the previous
+       one stuck highlighted */
+    if (max > 0 && y >= max - 4 && secs.length) active = secs[secs.length - 1].id;
+
     jumps.forEach(function (a) { a.classList.toggle('active', a.getAttribute('href') === '#' + active); });
 
     toTop.classList.toggle('on', y > 500);
