@@ -162,6 +162,13 @@
 
   .shead-a:hover { color: var(--t1); }
   .shead-a svg { width: 12px; height: 12px; transition: transform .18s; }
+
+  /* on small screens the Stack heading wraps and pushes against this
+     note, and the Résumé shortcut here is redundant with the one in
+     the nav/hero — simplest fix is to just not show either below 640px */
+  @media (max-width: 640px) {
+    #stack .shead-a, #cvPill2 { display: none; }
+  }
   .shead-a:hover svg { transform: translateX(2px); }
   .shead-a.diag:hover svg { transform: translate(2px, -2px); }
 
