@@ -118,10 +118,9 @@
     padding: 78px 32px 56px;
     display: flex;
     flex-direction: column;
-    gap: 24px;
   }
 
-  @media (min-width: 768px) { .shell { padding: 84px 60px 64px; gap: 32px; } }
+  @media (min-width: 768px) { .shell { padding: 84px 60px 64px; } }
 
   .sec { padding: 24px 0; position: relative; }
 
