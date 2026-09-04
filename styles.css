@@ -127,13 +127,17 @@
   /* ── SECTION HEADER ── */
   .shead {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     gap: 12px;
     border-bottom: 1px solid var(--line-2);
     padding-bottom: 12px;
     margin-bottom: 16px;
   }
+
+  /* nudge the right-side label down to sit on the heading's first
+     line instead of the flex box's very top edge */
+  .shead-a { margin-top: 2px; }
 
   .shead-t { font-family: var(--mono); font-size: 15px; color: var(--t4); letter-spacing: -0.02em; }
   .shead-t b { color: var(--t1); font-weight: 700; }
