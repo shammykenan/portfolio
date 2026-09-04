@@ -167,7 +167,8 @@
      note, and the Résumé shortcut here is redundant with the one in
      the nav/hero — simplest fix is to just not show either below 640px */
   @media (max-width: 640px) {
-    #stack .shead-a, #cvPill2, #credentials .shead-a { display: none; }
+    #stack .shead-a, #cvPill2, #credentials .shead-a, #gallery .shead-a { display: none; }
+    #credentials .shead-t { font-size: 11px; white-space: nowrap; }
   }
   .shead-a:hover svg { transform: translateX(2px); }
   .shead-a.diag:hover svg { transform: translate(2px, -2px); }
