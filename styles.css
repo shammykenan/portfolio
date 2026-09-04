@@ -122,7 +122,10 @@
 
   @media (min-width: 768px) { .shell { padding: 84px 60px 64px; } }
 
-  .sec { padding: 24px 0; position: relative; }
+  /* reserves space above every section's anchor-scroll target so it
+     doesn't land tucked under (or inconsistently offset from) the
+     fixed 54px nav bar when a nav link is clicked */
+  .sec { padding: 24px 0; position: relative; scroll-margin-top: 96px; }
 
   /* ── SECTION HEADER ── */
   .shead {
