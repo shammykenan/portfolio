@@ -86,6 +86,10 @@
 <div class="ht ht-tr"></div>
 <div class="ht ht-bl"></div>
 <div class="cur" id="cur"></div>
+<div class="hover-tip" id="hoverTip">
+  <span id="hoverTipText">Tap to view case study</span>
+  <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+</div>
 
 <!-- ═══════════ NAV ═══════════ -->
 <nav>
@@ -131,7 +135,7 @@
       <div class="hero-body">
         <div class="avail"><span class="pip"></span>Available for work</div>
         <h1>Shammy Kenan Din</h1>
-        <div class="hero-role">Web Developer &amp; IT Support</div>
+        <div class="hero-role">Backend &amp; Web Developer</div>
 
         <div class="hero-bio">
           <p>
@@ -173,7 +177,7 @@
     <div class="stats">
       <div class="stat"><div class="stat-n">4+</div><div class="stat-l">Projects<br>built</div></div>
       <div class="stat stat-hi"><div class="stat-n">1</div><div class="stat-l">Live, with<br>60+ users</div></div>
-      <div class="stat"><div class="stat-n">2</div><div class="stat-l">Roles — sole IT support<br>+ web developer</div></div>
+      <div class="stat"><div class="stat-n">300+</div><div class="stat-l">Reports<br>every week</div></div>
       <div class="stat"><div class="stat-n">500</div><div class="stat-l">Professional<br>internship hrs</div></div>
     </div>
   </section>
@@ -237,7 +241,11 @@
       <div class="shead-t"><b>Projects</b> — what I've built</div>
     </div>
 
-    <div class="rows">
+    <div class="featured">
+      <div class="featured-kicker">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 3l1.9 5.8L20 11l-6.1 2.2L12 19l-1.9-5.8L4 11l6.1-2.2L12 3z"/></svg>
+        Featured case study
+      </div>
       <button class="row" data-case="eod">
         <div class="prow-head">
           <div class="prow-l">
@@ -261,9 +269,13 @@
         <div class="chips">
           <span class="chip">Laravel</span><span class="chip">PostgreSQL</span><span class="chip">Blade</span><span class="chip">PWA</span><span class="chip">Railway</span><span class="chip">Brevo SMTP</span>
         </div>
-        <div class="row-more">Tap to view more info<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        <div class="row-more">Tap to view Upturn EOD Reporting System case study<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
       </button>
+    </div>
 
+    <div class="also-built">Also built</div>
+
+    <div class="rows">
       <button class="row" data-case="pos">
         <div class="prow-head">
           <div class="prow-l">
@@ -283,7 +295,7 @@
         <div class="chips">
           <span class="chip">PHP</span><span class="chip">MySQL</span><span class="chip">Bootstrap</span><span class="chip">ESC/POS</span><span class="chip">Brevo SMTP</span>
         </div>
-        <div class="row-more">Tap to view more info<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        <div class="row-more">Tap to view SKD Point of Sale case study<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
       </button>
 
       <button class="row" data-case="gm">
@@ -308,7 +320,7 @@
         <div class="chips">
           <span class="chip">PHP</span><span class="chip">MySQL</span><span class="chip">Audit trails</span><span class="chip">Rate limiting</span>
         </div>
-        <div class="row-more">Tap to view more info<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        <div class="row-more">Tap to view Grease Monkey — Inventory case study<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
       </button>
 
       <button class="row" data-case="ecom">
@@ -330,7 +342,7 @@
         <div class="chips">
           <span class="chip">PHP</span><span class="chip">MySQL</span><span class="chip">MVC</span><span class="chip">Bootstrap</span>
         </div>
-        <div class="row-more">Tap to view more info<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        <div class="row-more">Tap to view PHP E-Commerce Platform case study<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
       </button>
     </div>
   </section>
@@ -391,7 +403,7 @@
         <div class="cert-s">Datamex College of Saint Adeline · Expected 2027</div>
       </div>
 
-      <button class="cert" id="cocCert">
+      <button class="cert" id="cocCert" data-tip="Tap to view certificate">
         <div class="cert-k">Internship</div>
         <div class="cert-t">500-Hour Professional Internship</div>
         <div class="cert-foot">
@@ -400,7 +412,7 @@
         </div>
       </button>
 
-      <a class="cert" href="https://eod.upturnbusinesssolutionsph.com" target="_blank" rel="noopener noreferrer">
+      <a class="cert" href="https://eod.upturnbusinesssolutionsph.com" target="_blank" rel="noopener noreferrer" data-tip="Tap to open EOD Reporting System">
         <div class="cert-k">Live deployment</div>
         <div class="cert-t">EOD Reporting System</div>
         <div class="cert-foot">
@@ -408,7 +420,7 @@
         </div>
       </a>
 
-      <a class="cert" href="http://portal.upturnbusinesssolutionsph.com/" target="_blank" rel="noopener noreferrer">
+      <a class="cert" href="http://portal.upturnbusinesssolutionsph.com/" target="_blank" rel="noopener noreferrer" data-tip="Tap to open Upturn Tax Portal">
         <div class="cert-k">Contribution</div>
         <div class="cert-t">Upturn Tax Portal — Login Redesign</div>
         <div class="cert-foot">
@@ -416,7 +428,7 @@
         </div>
       </a>
 
-      <a class="cert" href="https://github.com/shammykenan/greasemonkeyinventory" target="_blank" rel="noopener noreferrer">
+      <a class="cert" href="https://github.com/shammykenan/greasemonkeyinventory" target="_blank" rel="noopener noreferrer" data-tip="Tap to view source on GitHub">
         <div class="cert-k">Open source</div>
         <div class="cert-t">Grease Monkey Inventory</div>
         <div class="cert-foot">
@@ -424,7 +436,7 @@
         </div>
       </a>
 
-      <button class="cert" id="cvCert">
+      <button class="cert" id="cvCert" data-tip="Tap to view résumé">
         <div class="cert-k">Document</div>
         <div class="cert-t">Curriculum Vitae</div>
         <div class="cert-foot">

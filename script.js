@@ -29,8 +29,19 @@
   burger.addEventListener('click', function () { setMenu(!sheet.classList.contains('open')); });
   $$('#sheet a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
 
-  /* ── custom cursor ── */
+  /* ── custom cursor + cursor-following "tap to..." tooltip ──
+     triggers on project rows (text derived from the title) and on
+     clickable credential cards (text from their own data-tip) */
   var cur = $('#cur');
+  var tip = $('#hoverTip');
+  var tipText = $('#hoverTipText');
+  var tipSource = null;
+
+  function tipTextFor(el) {
+    if (el.hasAttribute('data-tip')) return el.getAttribute('data-tip');
+    var name = $('.prow-t', el);
+    return 'Tap to view ' + (name ? name.textContent : '') + ' case study';
+  }
 
   if (window.matchMedia('(hover: hover)').matches && window.innerWidth > 640) {
     window.addEventListener('mousemove', function (e) {
@@ -38,9 +49,27 @@
       cur.style.left = e.clientX + 'px';
       cur.style.top = e.clientY + 'px';
       cur.classList.toggle('big', !!(e.target.closest && e.target.closest('a, button, .car-slide, .row, .skill, .cert')));
+
+      if (tip) {
+        var src = e.target.closest && e.target.closest('.row[data-case], .cert[data-tip]');
+        tip.classList.toggle('on', !!src);
+        if (src) {
+          if (src !== tipSource) {
+            tipSource = src;
+            tipText.textContent = tipTextFor(src);
+          }
+          tip.style.left = e.clientX + 'px';
+          tip.style.top = e.clientY + 'px';
+        } else {
+          tipSource = null;
+        }
+      }
     }, { passive: true });
 
-    document.addEventListener('mouseleave', function () { cur.classList.remove('on'); });
+    document.addEventListener('mouseleave', function () {
+      cur.classList.remove('on');
+      if (tip) tip.classList.remove('on');
+    });
   }
 
   /* ── missing-image placeholders ── */
